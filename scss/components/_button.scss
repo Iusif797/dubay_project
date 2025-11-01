@@ -1,0 +1,37 @@
+@use '../utils/variables' as *;
+
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color $transition-base, transform $transition-base;
+    white-space: nowrap;
+
+    &:hover {
+        transform: translateY(-1px);
+    }
+
+    &--primary {
+        background-color: $color-primary;
+        color: $color-black;
+
+        &:hover {
+            background-color: adjust-color($color-primary, $lightness: 5%);
+        }
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: $color-white;
+        border: 2px solid $color-white;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-black;
+        }
+    }
+}
+

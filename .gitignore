@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Compiled CSS
+*.css.map
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Build files (если будут использоваться сборщики)
+dist/
+build/
+

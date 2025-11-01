@@ -1,0 +1,122 @@
+@use '../utils/variables' as *;
+
+.property-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #282828;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    transition: transform $transition-base;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &--highlight {
+        background-color: $color-primary;
+    }
+
+    &__image-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 62.5%;
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        gap: 12px;
+    }
+
+    &__category {
+        font-size: 12px;
+        font-weight: $font-weight-normal;
+        color: #808080;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    &--highlight &__category {
+        color: $color-black;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        color: $color-white;
+        line-height: 1.3;
+        margin: 0;
+    }
+
+    &--highlight &__title {
+        color: $color-black;
+    }
+
+    &__description {
+        font-size: 13px;
+        font-weight: $font-weight-normal;
+        color: #808080;
+        line-height: 1.5;
+        margin: 0;
+        flex: 1;
+    }
+
+    &--highlight &__description {
+        color: $color-black;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 12px;
+        font-weight: $font-weight-normal;
+        color: $color-white;
+        text-decoration: none;
+        margin-top: auto;
+        transition: color $transition-base;
+
+        &::after {
+            content: '>';
+            color: $color-primary;
+            font-size: 14px;
+            transition: color $transition-base;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &--highlight &__link {
+        color: $color-black;
+
+        &::after {
+            color: $color-black;
+        }
+
+        &:hover {
+            color: $color-black;
+            opacity: 0.8;
+        }
+    }
+
+    &--carousel {
+        border: 1px solid #C89F5F;
+    }
+}
+

@@ -1,0 +1,44 @@
+@use '../utils/variables' as *;
+
+.breadcrumbs {
+    background-color: $color-secondary;
+    padding: $spacing-sm 0;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: $spacing-xs;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: $spacing-xs;
+        color: $color-gray;
+        font-size: $font-size-base;
+
+        &:not(:last-child)::after {
+            content: '>';
+            margin-left: $spacing-xs;
+            color: $color-gray;
+        }
+
+        &--active {
+            color: $color-gray;
+        }
+    }
+
+    &__link {
+        color: $color-white;
+        transition: color $transition-base;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__current {
+        color: $color-gray;
+    }
+}
+

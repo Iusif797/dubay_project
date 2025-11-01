@@ -1,0 +1,84 @@
+@use '../utils/variables' as *;
+
+.categories {
+    background-color: $color-dark;
+    padding: $spacing-xxl 0 $spacing-xxl;
+
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: $font-weight-bold;
+        line-height: 1.2;
+        color: $color-white;
+        margin-bottom: $spacing-xl;
+    }
+
+    &__title-accent {
+        display: inline-block;
+    }
+
+    &__carousel {
+        position: relative;
+    }
+}
+
+.carousel {
+    position: relative;
+
+    &__track {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $spacing-xl;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: $color-white;
+        display: grid;
+        place-items: center;
+        transition: background-color $transition-base;
+        z-index: 3;
+        backdrop-filter: blur(4px);
+    }
+
+    &__arrow--prev { left: -$spacing-xl; }
+    &__arrow--next { right: -$spacing-xl; }
+
+    &__arrow::before {
+        content: '‹';
+        font-size: 22px;
+        line-height: 1;
+    }
+
+    &__arrow--next::before { content: '›'; }
+
+    @media (max-width: $breakpoint-desktop) {
+        &__track { gap: $spacing-lg; }
+        &__arrow--prev { left: -$spacing-lg; }
+        &__arrow--next { right: -$spacing-lg; }
+    }
+}
+
+.carousel__dots {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-sm;
+    margin-top: $spacing-lg;
+}
+
+.carousel__dots button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $color-gray;
+    transition: background-color $transition-base;
+}
+
+.carousel__dots button.is-active { background: $color-primary; }

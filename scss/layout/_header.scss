@@ -1,0 +1,35 @@
+@use '../utils/variables' as *;
+
+.header {
+    background-color: $color-secondary;
+    padding: $spacing-md 0;
+    position: relative;
+    z-index: $z-header;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $spacing-lg;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: $spacing-xl;
+        margin-left: auto;
+    }
+
+    &__phone {
+        color: $color-white;
+        font-size: 18px;
+        font-weight: $font-weight-medium;
+        transition: color $transition-base;
+        white-space: nowrap;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+

@@ -1,0 +1,5 @@
+@use '../utils/variables' as *;
+
+.pagination { display: flex; gap: $spacing-sm; justify-content: center; }
+.pagination__dot { width: 8px; height: 8px; border-radius: 50%; background: $color-gray; }
+.pagination__dot.is-active { background: $color-primary; }

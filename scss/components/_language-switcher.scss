@@ -1,0 +1,23 @@
+@use '../utils/variables' as *;
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &__link {
+        color: $color-gray;
+        font-size: $font-size-base;
+        font-weight: $font-weight-medium;
+        transition: color $transition-base;
+
+        &:hover {
+            color: $color-white;
+        }
+
+        &--active {
+            color: $color-white;
+        }
+    }
+}
+

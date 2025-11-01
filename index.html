@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DubaiRealty - Apartments in Dubai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <div class="logo__content">
+                        <h1 class="logo__title">DubaiRealty</h1>
+                        <p class="logo__subtitle">Real Estate</p>
+                    </div>
+                </a>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item nav__item--dropdown">
+                            <a href="#" class="nav__link nav__link--active">
+                                BUY
+                                <svg class="nav__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                    <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <div class="dropdown">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item">
+                                        <a href="#" class="dropdown__link">Category number one</a>
+                                    </li>
+                                    <li class="dropdown__item dropdown__item--active">
+                                        <a href="#" class="dropdown__link">Apartments in Dubai</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="#" class="dropdown__link">Category number twenty five</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">BLOG</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">ABOUT</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header__right">
+                    <a href="#" class="btn btn--primary">Book a consultation</a>
+
+                    <div class="language-switcher">
+                        <a href="#" class="language-switcher__link language-switcher__link--active">EN</a>
+                        <a href="#" class="language-switcher__link">RU</a>
+                    </div>
+
+                    <a href="tel:+97143216789" class="header__phone">+971 4 321 6789</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Main</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">Buy</a>
+                </li>
+                <li class="breadcrumbs__item breadcrumbs__item--active">
+                    <span class="breadcrumbs__current">Apartments in Dubai</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero__overlay"></div>
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    Apartments<br>
+                    <span class="hero__title-highlight">in Dubai</span>
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <main class="main">
+        <section class="categories">
+            <div class="container">
+                <h2 class="categories__title">All Apartments<br><span class="categories__title-accent">Category</span></h2>
+
+                <div class="categories__carousel carousel">
+                    <button class="carousel__arrow carousel__arrow--prev" aria-label="Previous"></button>
+                    <div class="carousel__track">
+                        <article class="category-card is-active">
+                            <img src="assets/images/townhouse.png" alt="Townhouses" class="category-card__image">
+                            <div class="category-card__overlay"></div>
+                            <div class="category-card__content">
+                                <h3 class="category-card__title">Townhouses</h3>
+                                <a href="#" class="category-card__link">Learn more</a>
+                            </div>
+                        </article>
+
+                        <article class="category-card">
+                            <img src="assets/images/villa.png" alt="Villa" class="category-card__image">
+                            <div class="category-card__overlay"></div>
+                            <div class="category-card__content">
+                                <h3 class="category-card__title">Villa</h3>
+                                <a href="#" class="category-card__link">Learn more</a>
+                            </div>
+                        </article>
+
+                        <article class="category-card">
+                            <img src="assets/images/commercial.png" alt="Commercial" class="category-card__image">
+                            <div class="category-card__overlay"></div>
+                            <div class="category-card__content">
+                                <h3 class="category-card__title">Commercial</h3>
+                                <a href="#" class="category-card__link">Learn more</a>
+                            </div>
+                        </article>
+
+                        <article class="category-card category-card--text">
+                            <div class="category-card__body">
+                                <h3 class="category-card__title">Apartments</h3>
+                                <p class="category-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat molestie Integer aliquam consectetur. Faucibus vitae dui massa tellus magna sit.</p>
+                                <a href="#" class="category-card__link category-card__link--dark">Learn more</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel__arrow carousel__arrow--next" aria-label="Next"></button>
+                </div>
+
+                <div class="carousel__dots">
+                    <button class="is-active" aria-label="Slide 1"></button>
+                    <button aria-label="Slide 2"></button>
+                    <button aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-offers">
+            <div class="best-offers__container">
+                <h2 class="best-offers__title">Best Offers</h2>
+
+                <div class="best-offers__grid">
+                    <article class="best-offers__card">
+                        <div class="best-offers__image-wrapper">
+                            <img src="assets/images/arabian_ranches.png" alt="Arabian Ranches" class="best-offers__image">
+                        </div>
+                        <div class="best-offers__content">
+                            <span class="best-offers__category">Townhous</span>
+                            <h3 class="best-offers__card-title">Arabian Ranches</h3>
+                            <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                            <a href="#" class="best-offers__link">Learn more</a>
+                        </div>
+                    </article>
+
+                    <article class="best-offers__card best-offers__card--highlight">
+                        <div class="best-offers__image-wrapper">
+                            <img src="assets/images/dubai_hillsestate.png" alt="Dubai Hills Estate" class="best-offers__image">
+                        </div>
+                        <div class="best-offers__content">
+                            <span class="best-offers__category">Villa</span>
+                            <h3 class="best-offers__card-title">Dubai Hills Estate</h3>
+                            <p class="best-offers__description">Al Barsha South, Downtown Dubai are two popular areas that be close to this neighbourhood.</p>
+                            <a href="#" class="best-offers__link">Learn more</a>
+                        </div>
+                    </article>
+
+                    <article class="best-offers__card">
+                        <div class="best-offers__image-wrapper">
+                            <img src="assets/images/shell_core.png" alt="Shell and Core" class="best-offers__image">
+                        </div>
+                        <div class="best-offers__content">
+                            <span class="best-offers__category">Commercial</span>
+                            <h3 class="best-offers__card-title">Shell and Core</h3>
+                            <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                            <a href="#" class="best-offers__link">Learn more</a>
+                        </div>
+                    </article>
+
+                    <article class="best-offers__card">
+                        <div class="best-offers__image-wrapper">
+                            <img src="assets/images/luxury_living.png" alt="Luxury Living" class="best-offers__image">
+                        </div>
+                        <div class="best-offers__content">
+                            <span class="best-offers__category">Apartments</span>
+                            <h3 class="best-offers__card-title">Luxury Living</h3>
+                            <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                            <a href="#" class="best-offers__link">Learn more</a>
+                        </div>
+                    </article>
+
+                    <article class="best-offers__card">
+                        <div class="best-offers__image-wrapper">
+                            <img src="assets/images/arabian_ranches2.png" alt="Arabian Ranches" class="best-offers__image">
+                        </div>
+                        <div class="best-offers__content">
+                            <span class="best-offers__category">Townhous</span>
+                            <h3 class="best-offers__card-title">Arabian Ranches</h3>
+                            <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                            <a href="#" class="best-offers__link">Learn more</a>
+                        </div>
+                    </article>
+
+                    <article class="best-offers__card">
+                        <div class="best-offers__image-wrapper">
+                            <img src="assets/images/ShellandCore.png" alt="Shell and Core" class="best-offers__image">
+                        </div>
+                        <div class="best-offers__content">
+                            <span class="best-offers__category">Commercial</span>
+                            <h3 class="best-offers__card-title">Shell and Core</h3>
+                            <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                            <a href="#" class="best-offers__link">Learn more</a>
+                        </div>
+                    </article>
+
+                    <article class="best-offers__card">
+                        <div class="best-offers__image-wrapper">
+                            <img src="assets/images/ShellAndCoreS.png" alt="Shell and Core" class="best-offers__image">
+                        </div>
+                        <div class="best-offers__content">
+                            <span class="best-offers__category">Commercial</span>
+                            <h3 class="best-offers__card-title">Shell and Core</h3>
+                            <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                            <a href="#" class="best-offers__link">Learn more</a>
+                        </div>
+                    </article>
+
+                    <article class="best-offers__card">
+                        <div class="best-offers__image-wrapper">
+                            <img src="assets/images/Luxury&Living.png" alt="Luxury Living" class="best-offers__image">
+                        </div>
+                        <div class="best-offers__content">
+                            <span class="best-offers__category">Apartments</span>
+                            <h3 class="best-offers__card-title">Luxury Living</h3>
+                            <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                            <a href="#" class="best-offers__link">Learn more</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="best-offers__carousel-wrapper">
+                    <div class="best-offers__carousel">
+                        <article class="best-offers__carousel-card">
+                            <div class="best-offers__image-wrapper">
+                                <img src="assets/images/426x581.png" alt="Arabian Ranches" class="best-offers__image">
+                            </div>
+                            <div class="best-offers__content">
+                                <span class="best-offers__category">Townhous</span>
+                                <h3 class="best-offers__card-title">Arabian Ranches</h3>
+                                <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                                <a href="#" class="best-offers__link">Learn more</a>
+                            </div>
+                        </article>
+
+                        <article class="best-offers__carousel-card">
+                            <div class="best-offers__image-wrapper">
+                                <img src="assets/images/426x581 (1).png" alt="Shell and Core" class="best-offers__image">
+                            </div>
+                            <div class="best-offers__content">
+                                <span class="best-offers__category">Commercial</span>
+                                <h3 class="best-offers__card-title">Shell and Core</h3>
+                                <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                                <a href="#" class="best-offers__link">Learn more</a>
+                            </div>
+                        </article>
+
+                        <article class="best-offers__carousel-card">
+                            <div class="best-offers__image-wrapper">
+                                <img src="assets/images/426x581 (2).png" alt="Shell and Core" class="best-offers__image">
+                            </div>
+                            <div class="best-offers__content">
+                                <span class="best-offers__category">Commercial</span>
+                                <h3 class="best-offers__card-title">Shell and Core</h3>
+                                <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                                <a href="#" class="best-offers__link">Learn more</a>
+                            </div>
+                        </article>
+
+                        <article class="best-offers__carousel-card">
+                            <div class="best-offers__image-wrapper">
+                                <img src="assets/images/426x581 (3).png" alt="Luxury Living" class="best-offers__image">
+                            </div>
+                            <div class="best-offers__content">
+                                <span class="best-offers__category">Apartments</span>
+                                <h3 class="best-offers__card-title">Luxury Living</h3>
+                                <p class="best-offers__description">The launch of this community enabled expats to own a luxurious property in Dubai.</p>
+                                <a href="#" class="best-offers__link">Learn more</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="best-offers__pagination">
+                        <button class="best-offers__pagination-button" aria-label="Previous page">&lt;</button>
+                        <button class="best-offers__pagination-button" aria-label="Page 1">1</button>
+                        <button class="best-offers__pagination-button best-offers__pagination-button--active" aria-label="Page 2" aria-current="page">2</button>
+                        <button class="best-offers__pagination-button" aria-label="Page 3">3</button>
+                        <span class="best-offers__pagination-button best-offers__pagination-button--dots">...</span>
+                        <button class="best-offers__pagination-button" aria-label="Page 94">94</button>
+                        <button class="best-offers__pagination-button" aria-label="Page 95">95</button>
+                        <button class="best-offers__pagination-button" aria-label="Page 96">96</button>
+                        <button class="best-offers__pagination-button" aria-label="Next page">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

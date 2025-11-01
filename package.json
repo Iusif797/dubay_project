@@ -1,0 +1,17 @@
+{
+  "name": "appartments-in-dubai",
+  "version": "1.0.0",
+  "description": "DubaiRealty - Real Estate Agency Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/main.scss style.css",
+    "sass:watch": "sass --watch scss/main.scss:style.css",
+    "sass:build": "sass scss/main.scss style.css --style compressed"
+  },
+  "keywords": ["real-estate", "dubai", "scss", "website"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}
