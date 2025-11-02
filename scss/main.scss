@@ -11,6 +11,9 @@
 @use 'layout/header';
 @use 'layout/navigation';
 @use 'layout/hero';
+@use 'layout/home-hero';
+@use 'layout/latest-projects';
+@use 'layout/expertise';
 @use 'layout/categories';
 @use 'layout/best-offers';
 @use 'layout/content-section';
@@ -18,7 +21,8 @@
 @use 'layout/content';
 @use 'layout/contact';
 @use 'layout/footer';
-
+@use 'layout/video-section';
+@use 'layout/quote-section';
 @use 'components/logo';
 @use 'components/button';
 @use 'components/dropdown';

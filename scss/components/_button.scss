@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use 'sass:color';
 
 .btn {
     display: inline-block;
@@ -19,7 +20,7 @@
         color: $color-black;
 
         &:hover {
-            background-color: adjust-color($color-primary, $lightness: 5%);
+            background-color: color.adjust($color-primary, $lightness: 5%);
         }
     }
 
