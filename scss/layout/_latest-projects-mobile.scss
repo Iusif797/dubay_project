@@ -3,7 +3,7 @@
 
 .latest-projects {
     @include respond-to('tablet') {
-        padding: 60px 0;
+        padding: 50px 0;
 
         .container {
             padding: 0 20px;
@@ -69,20 +69,54 @@
 
 .project-card {
     @include respond-to('tablet') {
+        &__image {
+            height: 250px;
+        }
+
+        &__body {
+            padding: 20px;
+        }
+
         &__title {
             font-size: 20px;
+            margin-bottom: 8px;
         }
 
         &__subtitle {
             font-size: 13px;
+            margin-bottom: 12px;
         }
 
         &__description {
             font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 16px;
         }
 
         &__link {
             font-size: 14px;
+        }
+    }
+
+    @include respond-to('mobile-lg') {
+        &__image {
+            height: 220px;
+        }
+
+        &__body {
+            padding: 18px;
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__subtitle {
+            font-size: 12px;
+        }
+
+        &__description {
+            font-size: 13px;
         }
     }
 }

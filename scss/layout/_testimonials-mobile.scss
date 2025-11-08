@@ -1,101 +1,155 @@
 @use '../utils/variables' as *;
 @use '../utils/breakpoints' as *;
 
-.testimonials {
-    @include respond-to('tablet') {
-        padding: 100px 0 60px;
+@include respond-to('tablet') {
+    .testimonials {
+        padding: 60px 0 50px;
 
         .container {
+            padding: 0;
+            max-width: 100%;
+        }
+
+        &__slider {
+            margin-top: 50px;
             padding: 0 20px;
         }
-    }
 
-    @include respond-to('mobile-lg') {
-        padding: 80px 0 40px;
-    }
+        &__slides {
+            width: 100%;
+            gap: 0;
+        }
 
-    &__slide {
-        @include respond-to('tablet') {
+        &__slide {
             flex-direction: column;
-            gap: 20px;
-        }
-    }
-
-    &__card {
-        @include respond-to('tablet') {
-            padding: 50px 30px 40px;
-        }
-
-        @include respond-to('mobile-lg') {
-            padding: 50px 25px 35px;
-        }
-    }
-
-    &__avatar {
-        @include respond-to('tablet') {
-            width: 120px;
-            height: 120px;
-            top: -50px;
-            left: 30px;
+            gap: 0;
+            min-width: 100%;
+            width: 100%;
+            padding: 0;
+            
+            .testimonials__card:not(:first-child) {
+                display: none;
+            }
         }
 
-        @include respond-to('mobile-lg') {
+        &__card {
+            padding: 70px 25px 30px;
+            width: 100%;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        &__avatar {
             width: 100px;
             height: 100px;
-            top: -40px;
-            left: 25px;
-            border-width: 4px;
-        }
-    }
-
-    &__quote-icon {
-        @include respond-to('tablet') {
-            font-size: 60px;
-            top: 40px;
-            right: 30px;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        @include respond-to('mobile-lg') {
+        &__quote-icon {
             font-size: 50px;
-            top: 35px;
+            top: 20px;
             right: 25px;
         }
-    }
 
-    &__name {
-        @include respond-to('tablet') {
-            font-size: 32px;
-            margin: 80px 0 10px 0;
+        &__name {
+            font-size: 22px;
+            margin: 20px 0 8px 0;
+            text-align: center;
         }
 
-        @include respond-to('mobile-lg') {
-            font-size: 28px;
-            margin: 70px 0 8px 0;
+        &__position {
+            font-size: 13px;
+            margin: 0 0 16px 0;
+            text-align: center;
         }
-    }
 
-    &__position {
-        @include respond-to('tablet') {
+        &__text {
             font-size: 14px;
-            margin: 0 0 20px 0;
-        }
-    }
-
-    &__text {
-        @include respond-to('tablet') {
-            font-size: 14px;
-            line-height: 1.7;
-        }
-    }
-
-    &__indicators {
-        @include respond-to('tablet') {
-            margin-top: 40px;
+            line-height: 1.6;
+            text-align: center;
         }
 
-        @include respond-to('mobile-lg') {
+        &__indicators {
             margin-top: 30px;
+            gap: 8px;
+        }
+
+        &__indicator {
+            width: 10px;
+            height: 10px;
+        }
+
+        &__arrows {
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        &__arrow {
+            width: 45px;
+            height: 45px;
+            
+            svg {
+                width: 18px;
+                height: 18px;
+            }
         }
     }
 }
 
+@include respond-to('mobile-lg') {
+    .testimonials {
+        padding: 50px 0 40px;
+
+        &__slider {
+            margin-top: 40px;
+        }
+
+        &__card {
+            padding: 70px 20px 25px;
+        }
+
+        &__avatar {
+            width: 90px;
+            height: 90px;
+            top: -45px;
+            border-width: 4px;
+        }
+
+        &__quote-icon {
+            font-size: 45px;
+            top: 18px;
+            right: 20px;
+        }
+
+        &__name {
+            font-size: 20px;
+            margin: 18px 0 6px 0;
+        }
+
+        &__position {
+            font-size: 12px;
+            margin: 0 0 14px 0;
+        }
+
+        &__text {
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        &__indicators {
+            margin-top: 25px;
+        }
+
+        &__arrow {
+            width: 40px;
+            height: 40px;
+            
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

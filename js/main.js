@@ -208,8 +208,10 @@ class TestimonialsSlider {
 class MobileMenu {
   constructor() {
     this.burger = document.querySelector(".header__burger");
-    this.nav = document.querySelector(".header__nav");
+    this.nav = document.querySelector(".nav");
+    this.navClose = document.querySelector(".nav__close");
     this.overlay = document.querySelector(".header__overlay");
+    this.headerRight = document.querySelector(".header__right");
     this.body = document.body;
 
     if (!this.burger || !this.nav || !this.overlay) return;
@@ -221,10 +223,13 @@ class MobileMenu {
 
   init() {
     this.burger.addEventListener("click", () => this.toggle());
+    if (this.navClose) {
+      this.navClose.addEventListener("click", () => this.close());
+    }
     this.overlay.addEventListener("click", () => this.close());
 
     this.dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector(".header__link");
+      const link = dropdown.querySelector(".nav__link");
       const dropdownMenu = dropdown.querySelector(".dropdown");
       
       if (link && dropdownMenu) {
@@ -256,16 +261,32 @@ class MobileMenu {
   }
 
   open() {
+    const headerContent = document.querySelector(".header__content");
+    
     this.burger.classList.add("is-active");
     this.nav.classList.add("is-active");
     this.overlay.classList.add("is-active");
+    if (this.headerRight) {
+      this.headerRight.classList.add("is-active");
+    }
+    if (headerContent) {
+      headerContent.classList.add("has-open-menu");
+    }
     this.body.style.overflow = "hidden";
   }
 
   close() {
+    const headerContent = document.querySelector(".header__content");
+    
     this.burger.classList.remove("is-active");
     this.nav.classList.remove("is-active");
     this.overlay.classList.remove("is-active");
+    if (this.headerRight) {
+      this.headerRight.classList.remove("is-active");
+    }
+    if (headerContent) {
+      headerContent.classList.remove("has-open-menu");
+    }
     this.body.style.overflow = "";
     
     this.dropdowns.forEach(dropdown => {

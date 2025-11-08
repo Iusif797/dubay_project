@@ -3,17 +3,21 @@
 
 .best-offers {
     @include respond-to('tablet') {
-        padding: 40px 0 30px;
+        padding: 50px 0 40px;
 
         .container {
             padding: 0 20px;
         }
     }
 
+    @include respond-to('mobile-lg') {
+        padding: 40px 0 30px;
+    }
+
     &__title {
         @include respond-to('tablet') {
             font-size: 32px;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         @include respond-to('mobile-lg') {
@@ -43,26 +47,63 @@
         }
     }
 
+    &__image {
+        @include respond-to('tablet') {
+            height: 220px;
+        }
+
+        @include respond-to('mobile-lg') {
+            height: 200px;
+        }
+    }
+
     &__content {
         @include respond-to('tablet') {
+            padding: 18px;
+        }
+
+        @include respond-to('mobile-lg') {
             padding: 16px;
+        }
+    }
+
+    &__category {
+        @include respond-to('tablet') {
+            font-size: 11px;
+            margin-bottom: 8px;
         }
     }
 
     &__card-title {
         @include respond-to('tablet') {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        @include respond-to('mobile-lg') {
             font-size: 16px;
         }
     }
 
     &__description {
         @include respond-to('tablet') {
+            font-size: 12px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        @include respond-to('mobile-lg') {
             font-size: 11px;
         }
     }
 
     &__link {
         @include respond-to('tablet') {
+            font-size: 11px;
+            padding: 8px 0;
+        }
+
+        @include respond-to('mobile-lg') {
             font-size: 10px;
         }
     }

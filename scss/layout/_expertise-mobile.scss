@@ -3,7 +3,7 @@
 
 .expertise {
     @include respond-to('tablet') {
-        padding: 60px 0;
+        padding: 50px 0;
 
         .container {
             padding: 0 20px;
@@ -16,40 +16,55 @@
 
     &__label {
         @include respond-to('tablet') {
-            font-size: 14px;
-            letter-spacing: 1px;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+        }
+
+        @include respond-to('mobile-lg') {
+            font-size: 11px;
             margin-bottom: 20px;
         }
     }
 
     &__slider {
         @include respond-to('tablet') {
-            min-height: 120px;
+            min-height: 140px;
+            padding: 0 10px;
         }
 
         @include respond-to('mobile-lg') {
-            min-height: 100px;
+            min-height: 120px;
         }
     }
 
     &__slide {
         @include respond-to('tablet') {
-            font-size: 32px;
+            font-size: 28px;
+            line-height: 1.4;
+            text-align: center;
         }
 
         @include respond-to('mobile-lg') {
-            font-size: 24px;
-            line-height: 1.3;
+            font-size: 22px;
+            line-height: 1.5;
         }
     }
 
     &__dots {
         @include respond-to('tablet') {
-            margin-top: 30px;
+            margin-top: 32px;
         }
 
         @include respond-to('mobile-lg') {
-            margin-top: 20px;
+            margin-top: 24px;
+        }
+    }
+
+    &__dot {
+        @include respond-to('tablet') {
+            width: 10px;
+            height: 10px;
         }
     }
 }

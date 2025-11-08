@@ -3,7 +3,7 @@
 
 .luxury-showcase {
     @include respond-to('tablet') {
-        padding: 60px 0;
+        padding: 50px 0;
 
         .container {
             padding: 0 20px;
@@ -17,8 +17,27 @@
     &__images {
         @include respond-to('tablet') {
             grid-template-columns: 1fr;
-            gap: 16px;
-            margin-bottom: 30px;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        @include respond-to('mobile-lg') {
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+    }
+
+    &__image {
+        @include respond-to('tablet') {
+            height: 240px;
+            
+            img {
+                object-fit: cover;
+            }
+        }
+
+        @include respond-to('mobile-lg') {
+            height: 220px;
         }
     }
 
@@ -36,17 +55,25 @@
     &__title {
         @include respond-to('tablet') {
             font-size: 24px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
+            line-height: 1.3;
         }
 
         @include respond-to('mobile-lg') {
             font-size: 22px;
+            margin-bottom: 12px;
         }
     }
 
     &__description {
         @include respond-to('tablet') {
             font-size: 14px;
+            line-height: 1.7;
+        }
+
+        @include respond-to('mobile-lg') {
+            font-size: 13px;
+            line-height: 1.6;
         }
     }
 }
