@@ -1,0 +1,66 @@
+@use '../utils/variables' as *;
+@use '../utils/breakpoints' as *;
+
+.contact-banner {
+    @include respond-to('tablet') {
+        padding: 50px 0;
+
+        .container {
+            padding: 0 20px;
+        }
+    }
+
+    @include respond-to('mobile-lg') {
+        padding: 40px 0;
+    }
+
+    &__content {
+        @include respond-to('tablet') {
+            max-width: 100%;
+            padding: 40px 30px;
+        }
+
+        @include respond-to('mobile-lg') {
+            padding: 35px 25px;
+        }
+    }
+
+    &__title {
+        @include respond-to('tablet') {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        @include respond-to('mobile-lg') {
+            font-size: 24px;
+        }
+    }
+
+    &__subtitle {
+        @include respond-to('tablet') {
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__form {
+        @include respond-to('tablet') {
+            gap: 12px;
+        }
+    }
+
+    &__input {
+        @include respond-to('tablet') {
+            padding: 14px 16px;
+            font-size: 14px;
+        }
+    }
+
+    &__button {
+        @include respond-to('tablet') {
+            padding: 14px 28px;
+            font-size: 14px;
+        }
+    }
+}
+

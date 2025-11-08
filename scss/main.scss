@@ -1,14 +1,17 @@
 @use 'utils/variables' as *;
 @use 'utils/functions' as *;
 @use 'utils/mixins' as *;
+@use 'utils/breakpoints' as *;
 @use 'utils/helpers' as *;
 
 @use 'base/reset';
 @use 'base/base';
 @use 'base/typography';
+@use 'base/base-mobile';
 
 @use 'layout/grid';
 @use 'layout/header';
+@use 'layout/header-mobile';
 @use 'layout/navigation';
 @use 'layout/hero';
 @use 'layout/home-hero';
@@ -26,8 +29,21 @@
 @use 'layout/luxury-showcase';
 @use 'layout/articles';
 @use 'layout/testimonials';
+@use 'layout/home-hero-mobile';
+@use 'layout/latest-projects-mobile';
+@use 'layout/expertise-mobile';
+@use 'layout/video-section-mobile';
+@use 'layout/quote-section-mobile';
+@use 'layout/luxury-showcase-mobile';
+@use 'layout/articles-mobile';
+@use 'layout/testimonials-mobile';
+@use 'layout/categories-mobile';
+@use 'layout/best-offers-mobile';
+@use 'layout/contact-banner-mobile';
+@use 'layout/footer-mobile';
 @use 'components/logo';
 @use 'components/button';
+@use 'components/button-mobile';
 @use 'components/dropdown';
 @use 'components/breadcrumbs';
 @use 'components/category-card';

@@ -1,0 +1,79 @@
+@use '../utils/variables' as *;
+@use '../utils/breakpoints' as *;
+
+.articles {
+    @include respond-to('tablet') {
+        padding: 60px 0;
+
+        .container {
+            padding: 0 20px;
+        }
+    }
+
+    @include respond-to('mobile-lg') {
+        padding: 40px 0;
+    }
+
+    &__header {
+        @include respond-to('tablet') {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__title {
+        @include respond-to('tablet') {
+            font-size: 32px;
+        }
+
+        @include respond-to('mobile-lg') {
+            font-size: 28px;
+        }
+    }
+
+    &__view-all {
+        @include respond-to('tablet') {
+            font-size: 14px;
+        }
+    }
+
+    &__grid {
+        @include respond-to('tablet') {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+
+    &__card {
+        @include respond-to('tablet') {
+            &--content {
+                padding: 30px;
+            }
+        }
+
+        @include respond-to('mobile-lg') {
+            &--content {
+                padding: 25px;
+            }
+        }
+    }
+
+    &__card-title {
+        @include respond-to('tablet') {
+            font-size: 20px;
+        }
+
+        @include respond-to('mobile-lg') {
+            font-size: 18px;
+        }
+    }
+
+    &__card-description {
+        @include respond-to('tablet') {
+            font-size: 14px;
+        }
+    }
+}
+

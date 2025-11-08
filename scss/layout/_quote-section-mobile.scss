@@ -1,0 +1,49 @@
+@use '../utils/variables' as *;
+@use '../utils/breakpoints' as *;
+
+.quote-section {
+    @include respond-to('tablet') {
+        padding: 40px 0;
+
+        .container {
+            padding: 0 20px;
+        }
+    }
+
+    @include respond-to('mobile-lg') {
+        padding: 30px 0;
+    }
+
+    &__content {
+        @include respond-to('tablet') {
+            max-width: 100%;
+            padding: 30px 25px;
+        }
+
+        @include respond-to('mobile-lg') {
+            padding: 25px 20px;
+        }
+    }
+
+    &__text {
+        @include respond-to('tablet') {
+            font-size: 16px;
+            margin: 0 0 16px 0;
+        }
+
+        @include respond-to('mobile-lg') {
+            font-size: 15px;
+        }
+    }
+
+    &__author {
+        @include respond-to('tablet') {
+            font-size: 16px;
+        }
+
+        @include respond-to('mobile-lg') {
+            font-size: 15px;
+        }
+    }
+}
+

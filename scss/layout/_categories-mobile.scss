@@ -1,0 +1,59 @@
+@use '../utils/variables' as *;
+@use '../utils/breakpoints' as *;
+
+.categories {
+    @include respond-to('tablet') {
+        padding: 30px 0;
+
+        .container {
+            padding: 0 20px;
+        }
+    }
+
+    &__title {
+        @include respond-to('tablet') {
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+
+        @include respond-to('mobile-lg') {
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__carousel {
+        @include respond-to('tablet') {
+            gap: 12px;
+        }
+    }
+
+    &__slide {
+        @include respond-to('tablet') {
+            min-width: 280px;
+        }
+
+        @include respond-to('mobile-lg') {
+            min-width: 250px;
+        }
+    }
+
+    &__controls {
+        @include respond-to('tablet') {
+            margin-top: 24px;
+        }
+    }
+}
+
+.category-card {
+    @include respond-to('tablet') {
+        &__title {
+            font-size: 18px;
+        }
+
+        &__content {
+            padding: 16px;
+        }
+    }
+}
+

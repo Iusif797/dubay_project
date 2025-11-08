@@ -1,0 +1,75 @@
+@use '../utils/variables' as *;
+@use '../utils/breakpoints' as *;
+
+.footer {
+    @include respond-to('tablet') {
+        padding: 50px 0 30px;
+
+        .container {
+            padding: 0 20px;
+        }
+    }
+
+    &__top {
+        @include respond-to('tablet') {
+            flex-direction: column;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+    }
+
+    &__logo-section {
+        @include respond-to('tablet') {
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    &__columns {
+        @include respond-to('tablet') {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px 20px;
+        }
+
+        @include respond-to('mobile-lg') {
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+    }
+
+    &__column-title {
+        @include respond-to('tablet') {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__link {
+        @include respond-to('tablet') {
+            font-size: 14px;
+            padding: 8px 0;
+        }
+    }
+
+    &__contact-item {
+        @include respond-to('tablet') {
+            font-size: 14px;
+        }
+    }
+
+    &__bottom {
+        @include respond-to('tablet') {
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 30px;
+            text-align: center;
+        }
+    }
+
+    &__social {
+        @include respond-to('tablet') {
+            justify-content: center;
+        }
+    }
+}
+

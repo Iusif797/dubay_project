@@ -1,0 +1,101 @@
+@use '../utils/variables' as *;
+@use '../utils/breakpoints' as *;
+
+.testimonials {
+    @include respond-to('tablet') {
+        padding: 100px 0 60px;
+
+        .container {
+            padding: 0 20px;
+        }
+    }
+
+    @include respond-to('mobile-lg') {
+        padding: 80px 0 40px;
+    }
+
+    &__slide {
+        @include respond-to('tablet') {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__card {
+        @include respond-to('tablet') {
+            padding: 50px 30px 40px;
+        }
+
+        @include respond-to('mobile-lg') {
+            padding: 50px 25px 35px;
+        }
+    }
+
+    &__avatar {
+        @include respond-to('tablet') {
+            width: 120px;
+            height: 120px;
+            top: -50px;
+            left: 30px;
+        }
+
+        @include respond-to('mobile-lg') {
+            width: 100px;
+            height: 100px;
+            top: -40px;
+            left: 25px;
+            border-width: 4px;
+        }
+    }
+
+    &__quote-icon {
+        @include respond-to('tablet') {
+            font-size: 60px;
+            top: 40px;
+            right: 30px;
+        }
+
+        @include respond-to('mobile-lg') {
+            font-size: 50px;
+            top: 35px;
+            right: 25px;
+        }
+    }
+
+    &__name {
+        @include respond-to('tablet') {
+            font-size: 32px;
+            margin: 80px 0 10px 0;
+        }
+
+        @include respond-to('mobile-lg') {
+            font-size: 28px;
+            margin: 70px 0 8px 0;
+        }
+    }
+
+    &__position {
+        @include respond-to('tablet') {
+            font-size: 14px;
+            margin: 0 0 20px 0;
+        }
+    }
+
+    &__text {
+        @include respond-to('tablet') {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+    }
+
+    &__indicators {
+        @include respond-to('tablet') {
+            margin-top: 40px;
+        }
+
+        @include respond-to('mobile-lg') {
+            margin-top: 30px;
+        }
+    }
+}
+

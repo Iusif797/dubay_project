@@ -11,17 +11,29 @@
     <header class="header header--transparent">
         <div class="container">
             <div class="header__inner">
-                <a href="index.html" class="logo">
-                    <div class="logo__content">
-                        <h1 class="logo__title">DubaiRealty</h1>
-                        <p class="logo__subtitle">Real Estate</p>
+                <div class="header__content">
+                    <div class="header__logo-wrapper">
+                        <a href="index.html" class="logo">
+                            <div class="logo__content">
+                                <h1 class="logo__title">DubaiRealty</h1>
+                                <p class="logo__subtitle">Real Estate</p>
+                            </div>
+                        </a>
                     </div>
-                </a>
 
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item nav__item--dropdown">
-                            <a href="#" class="nav__link">
+                    <button class="header__burger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <div class="header__overlay"></div>
+
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item nav__item--dropdown">
+                            <a href="#" class="header__link">
                                 BUY
                                 <svg class="nav__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
                                     <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
@@ -41,28 +53,28 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">BLOG</a>
+                        <li class="header__item">
+                            <a href="#" class="header__link">BLOG</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">ABOUT</a>
+                        <li class="header__item">
+                            <a href="#" class="header__link">ABOUT</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">CONTACT</a>
+                        <li class="header__item">
+                            <a href="#" class="header__link">CONTACT</a>
                         </li>
                     </ul>
-                </nav>
 
-                <div class="header__right">
-                    <a href="#" class="btn btn--primary">Book a consultation</a>
+                    <div class="header__right">
+                        <a href="#" class="btn btn--primary">Book a consultation</a>
 
-                    <div class="language-switcher">
-                        <a href="#" class="language-switcher__link language-switcher__link--active">EN</a>
-                        <a href="#" class="language-switcher__link">RU</a>
+                        <div class="language-switcher">
+                            <a href="#" class="language-switcher__link language-switcher__link--active">EN</a>
+                            <a href="#" class="language-switcher__link">RU</a>
+                        </div>
+
+                        <a href="tel:+97143216789" class="header__phone">+971 4 321 6789</a>
                     </div>
-
-                    <a href="tel:+97143216789" class="header__phone">+971 4 321 6789</a>
-                </div>
+                </nav>
             </div>
         </div>
     </header>

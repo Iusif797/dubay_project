@@ -1,0 +1,65 @@
+@use '../utils/variables' as *;
+@use '../utils/breakpoints' as *;
+
+.video-section {
+    @include respond-to('tablet') {
+        min-height: 300px;
+
+        .container {
+            padding: 0 20px;
+        }
+    }
+
+    @include respond-to('mobile-lg') {
+        min-height: 250px;
+    }
+
+    &__play {
+        @include respond-to('tablet') {
+            width: 80px;
+            height: 80px;
+        }
+
+        @include respond-to('mobile-lg') {
+            width: 70px;
+            height: 70px;
+        }
+
+        svg {
+            @include respond-to('tablet') {
+                width: 24px;
+                height: 24px;
+            }
+
+            @include respond-to('mobile-lg') {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+.video-modal {
+    @include respond-to('tablet') {
+        padding: 20px;
+    }
+
+    &__content {
+        @include respond-to('tablet') {
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+    }
+
+    &__close {
+        @include respond-to('tablet') {
+            top: 10px;
+            right: 10px;
+            width: 36px;
+            height: 36px;
+            font-size: 20px;
+        }
+    }
+}
+

@@ -1,0 +1,47 @@
+@use '../utils/variables' as *;
+@use '../utils/breakpoints' as *;
+
+.btn {
+    @include respond-to('tablet') {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    @include respond-to('mobile-lg') {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    &--primary {
+        @include respond-to('tablet') {
+            display: none;
+        }
+    }
+}
+
+.header__right {
+    @include respond-to('tablet') {
+        width: 100%;
+        padding: 30px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .btn {
+        @include respond-to('tablet') {
+            display: inline-flex;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .language-switcher {
+        @include respond-to('tablet') {
+            margin: 0;
+        }
+    }
+}
+
