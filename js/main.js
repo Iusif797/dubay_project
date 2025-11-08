@@ -123,7 +123,60 @@ class VideoModal {
   }
 }
 
+class TestimonialsSlider {
+  constructor() {
+    this.slider = document.querySelector(".testimonials__slider");
+    if (!this.slider) return;
+
+    this.slidesContainer = this.slider.querySelector(".testimonials__slides");
+    this.slides = document.querySelectorAll(".testimonials__slide");
+    this.indicators = document.querySelectorAll(".testimonials__indicator");
+    this.currentSlide = 0;
+    this.autoPlayInterval = null;
+
+    this.init();
+  }
+
+  init() {
+    this.indicators.forEach((indicator, index) => {
+      indicator.addEventListener("click", () => {
+        this.goToSlide(index);
+        this.resetAutoPlay();
+      });
+    });
+
+    this.startAutoPlay();
+  }
+
+  goToSlide(index) {
+    this.indicators[this.currentSlide].classList.remove("testimonials__indicator--active");
+    
+    this.currentSlide = index;
+    const offset = -index * 100;
+    this.slidesContainer.style.transform = `translateX(${offset}%)`;
+    
+    this.indicators[this.currentSlide].classList.add("testimonials__indicator--active");
+  }
+
+  nextSlide() {
+    const next = (this.currentSlide + 1) % this.slides.length;
+    this.goToSlide(next);
+  }
+
+  startAutoPlay() {
+    this.autoPlayInterval = setInterval(() => {
+      this.nextSlide();
+    }, 5000);
+  }
+
+  resetAutoPlay() {
+    clearInterval(this.autoPlayInterval);
+    this.startAutoPlay();
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   new ExpertiseSlider();
   new VideoModal();
+  new TestimonialsSlider();
 });
