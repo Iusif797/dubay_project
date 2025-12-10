@@ -2,7 +2,7 @@
 
 .contact-page {
     background-color: $color-secondary;
-    padding-top: 140px;
+    padding-top: 60px;
 
     &__title {
         font-size: 48px;
@@ -164,6 +164,86 @@
             height: 100%;
             object-fit: cover;
             /* Добавим легкий фильтр для стиля, если нужно */
+        }
+    }
+}
+
+.contact-form {
+    padding: 0 0 100px;
+    
+    .container {
+        max-width: $container-width;
+        padding: 0 $container-padding; 
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: $font-weight-bold;
+        color: $color-primary;
+        line-height: 1.2;
+        margin-bottom: 40px;
+
+        span {
+            color: $color-white;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 16px 20px;
+        color: $color-white;
+        font-size: 14px;
+        font-family: inherit;
+        outline: none;
+        transition: border-color $transition-base;
+        border-radius: 0;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        &:focus {
+            border-color: $color-primary;
+        }
+    }
+
+    &__textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    &__button {
+        align-self: flex-start;
+        background-color: $color-primary;
+        color: $color-black;
+        border: 2px solid $color-primary;
+        padding: 16px 60px;
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all $transition-base;
+        margin-top: 20px;
+
+        &:hover {
+            background-color: transparent;
+            color: $color-primary;
         }
     }
 }

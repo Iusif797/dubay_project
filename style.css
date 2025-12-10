@@ -1138,7 +1138,7 @@ button {
 
 .best-offers {
   background-color: #1A1A1A;
-  padding: 60px 0 40px;
+  padding: 100px 0;
 }
 .best-offers__container {
   max-width: 1200px;
@@ -1358,7 +1358,7 @@ button {
 .contact-banner {
   position: relative;
   background-color: #F4D03F;
-  padding: 60px 0;
+  padding: 100px 0;
   overflow: hidden;
 }
 .contact-banner__background {
@@ -1604,7 +1604,7 @@ button {
   justify-content: center;
   padding: 0;
   overflow: hidden;
-  background-color: transparent;
+  background-color: #1A1A1A;
 }
 .video-section__background {
   position: absolute;
@@ -1723,7 +1723,7 @@ button {
   }
 }
 .quote-section {
-  padding: 60px 0;
+  padding: 100px 0;
   background-color: #1A1A1A;
 }
 .quote-section__content {
@@ -1752,7 +1752,7 @@ button {
 }
 
 .luxury-showcase {
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: #1A1A1A;
 }
 .luxury-showcase__images {
@@ -1792,7 +1792,7 @@ button {
 }
 
 .articles {
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: #1A1A1A;
 }
 .articles__header {
@@ -1927,7 +1927,7 @@ button {
 }
 
 .testimonials {
-  padding: 140px 0 80px;
+  padding: 100px 0;
   background-color: #1A1A1A;
 }
 .testimonials__slider {
@@ -3006,7 +3006,7 @@ button {
 
 .contact-page {
   background-color: #2C2C2C;
-  padding-top: 140px;
+  padding-top: 60px;
 }
 .contact-page__title {
   font-size: 48px;
@@ -3152,14 +3152,82 @@ button {
   /* Добавим легкий фильтр для стиля, если нужно */
 }
 
+.contact-form {
+  padding: 0 0 100px;
+}
+.contact-form .container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.contact-form__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #F4D03F;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.contact-form__title span {
+  color: #FFFFFF;
+}
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-form__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.contact-form__input, .contact-form__textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 16px 20px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+  border-radius: 0;
+}
+.contact-form__input::placeholder, .contact-form__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.contact-form__input:focus, .contact-form__textarea:focus {
+  border-color: #F4D03F;
+}
+.contact-form__textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.contact-form__button {
+  align-self: flex-start;
+  background-color: #F4D03F;
+  color: #000000;
+  border: 2px solid #F4D03F;
+  padding: 16px 60px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.contact-form__button:hover {
+  background-color: transparent;
+  color: #F4D03F;
+}
+
 @media (max-width: 768px) {
   .contact-page {
-    padding-top: 100px;
+    padding-top: 40px;
   }
 }
 @media (max-width: 425px) {
   .contact-page {
-    padding-top: 80px;
+    padding-top: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -3234,6 +3302,45 @@ button {
 @media (max-width: 425px) {
   .contact-map__image {
     height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 0 0 60px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .contact-form__title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form__row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form__form {
+    gap: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .contact-form__input, .contact-form__textarea {
+    padding: 14px 16px;
+  }
+}
+@media (max-width: 425px) {
+  .contact-form__button {
+    width: 100%;
+    text-align: center;
   }
 }
 
