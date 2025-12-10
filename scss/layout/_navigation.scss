@@ -1,6 +1,18 @@
 @use '../utils/variables' as *;
 
 .nav {
+    &__header {
+        display: none;
+    }
+
+    &__close {
+        display: none;
+    }
+
+    &__logo {
+        display: none;
+    }
+
     &__list {
         display: flex;
         align-items: center;

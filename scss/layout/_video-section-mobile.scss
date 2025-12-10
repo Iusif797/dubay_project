@@ -3,15 +3,31 @@
 
 .video-section {
     @include respond-to('tablet') {
-        min-height: 300px;
+        height: 420px;
 
         .container {
             padding: 0 20px;
         }
+
+        &__background {
+            top: 40px;
+            left: 40px;
+            right: 40px;
+            bottom: 40px;
+            border-radius: 20px;
+        }
     }
 
     @include respond-to('mobile-lg') {
-        min-height: 250px;
+        height: 340px;
+
+        &__background {
+            top: 30px;
+            left: 20px;
+            right: 20px;
+            bottom: 30px;
+            border-radius: 16px;
+        }
     }
 
     &__play {

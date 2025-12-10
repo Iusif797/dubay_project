@@ -67,50 +67,50 @@
 
     &__frame {
         position: relative;
-        max-width: 700px;
-        padding: 50px;
-        border: 3px solid $color-primary;
+        max-width: 540px;
+        padding: 36px 40px;
+        border: 2px solid $color-primary;
         border-radius: 4px;
 
         &::before {
             content: '';
             position: absolute;
-            top: -15px;
-            left: -15px;
-            width: 60px;
-            height: 60px;
-            border-top: 3px solid $color-primary;
-            border-left: 3px solid $color-primary;
+            top: -12px;
+            left: -12px;
+            width: 48px;
+            height: 48px;
+            border-top: 2px solid $color-primary;
+            border-left: 2px solid $color-primary;
         }
 
         &::after {
             content: '';
             position: absolute;
-            bottom: -15px;
-            right: -15px;
-            width: 60px;
-            height: 60px;
-            border-bottom: 3px solid $color-primary;
-            border-right: 3px solid $color-primary;
+            bottom: -12px;
+            right: -12px;
+            width: 48px;
+            height: 48px;
+            border-bottom: 2px solid $color-primary;
+            border-right: 2px solid $color-primary;
         }
     }
 
     &__label {
         display: inline-block;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: $font-weight-normal;
         color: $color-white;
         letter-spacing: 2px;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
     }
 
     &__title {
-        font-size: 72px;
+        font-size: 54px;
         font-weight: $font-weight-bold;
         color: $color-white;
         line-height: 1.1;
-        margin: 0 0 40px 0;
-        letter-spacing: -1px;
+        margin: 0 0 28px 0;
+        letter-spacing: -0.5px;
     }
 
     &__title-accent {
